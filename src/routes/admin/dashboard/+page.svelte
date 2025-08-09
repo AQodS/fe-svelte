@@ -1,6 +1,8 @@
 <script>
   //import sidebar menu
   import SidebarMenu from "../../../components/SidebarMenu.svelte";
+
+  export let data;
 </script>
 
 <div class="container mt-5 mb-5">
@@ -12,7 +14,7 @@
       <div class="card border-0 rounded shadow-sm">
         <div class="card-header">Dashboard</div>
         <div class="card-body">
-          Selamat Datang, <strong></strong>
+          Selamat Datang, <strong>{data.user?.name}</strong>
         </div>
       </div>
     </div>
