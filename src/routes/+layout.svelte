@@ -22,7 +22,7 @@
             class="nav-link active"
             aria-current="page"
           >
-            Frontend-Svelte
+            Express-Svelte
           </a>
         </li>
       </ul>
