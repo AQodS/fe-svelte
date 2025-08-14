@@ -2,6 +2,8 @@
   //import sidebar menu
   import SidebarMenu from "../../../components/SidebarMenu.svelte";
 
+  import { enhance } from "$app/forms";
+
   /** @type {import('./$types').PageLoad} */
   export let data; // Data ini berisi props { users } dari fungsi load
 </script>
@@ -42,6 +44,17 @@
                       href="/admin/users/edit/{user.id}"
                       class="btn btn-warning btn-sm">Edit</a
                     >
+                    <form
+                      action="?/delete"
+                      method="POST"
+                      use:enhance
+                      style="display: inline;"
+                    >
+                      <input type="hidden" name="id" value={user.id} />
+                      <button type="submit" class="btn btn-danger btn-sm">
+                        Delete
+                      </button>
+                    </form>
                   </td>
                 </tr>
               {/each}
